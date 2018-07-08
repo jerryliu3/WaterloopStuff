@@ -1,0 +1,81 @@
+pkg:
+  ide: none
+
+  meta:
+    name: ESC_Final
+    description: A wio avr pkg using cosa framework
+    version: 0.0.1
+    keywords:
+    - avr
+    - c
+    - c++
+    - wio
+    - cosa
+    license: MIT
+
+  config:
+    minimum_wio_version: 0.3.2
+    supported_platforms:
+    - avr
+    supported_frameworks:
+    - cosa
+    supported_boards:
+    - uno
+
+  compile_options:
+    header_only: false
+    platform: avr
+  flags:
+    allow_only_global_flags: false
+    allow_only_required_flags: false
+    global_flags: []
+    visibility: PRIVATE
+  definitions:
+    allow_only_global_definitions: false
+    allow_only_required_definitions: false
+    global_definitions: []
+    visibility: PRIVATE
+
+targets:
+  default: tests
+  create:
+    test1:
+      src: tests/SDC2160S
+      framework: cosa
+      board: uno
+      flags:
+        global_flags: []
+        target_flags: []
+        pkg_flags: []
+      definitions:
+        global_definitions: []
+        target_definitions: []
+        pkg_definitions: []
+    test2:
+      src: tests/ESC_Arduino
+      framework: cosa
+      board: uno
+      flags:
+        global_flags: []
+        target_flags: []
+        pkg_flags: []
+      definitions:
+        global_definitions: []
+        target_definitions: []
+        pkg_definitions: []
+    test3:
+      src: tests/ESC
+      framework: cosa
+      board: uno
+      flags:
+        global_flags: []
+        target_flags: []
+        pkg_flags: []
+      definitions:
+        global_definitions: []
+        target_definitions: []
+        pkg_definitions: []
+dependencies:
+  cosa-servo:
+    version: 0.0.1
+    vendor: false
